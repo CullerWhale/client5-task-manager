@@ -1,13 +1,11 @@
 var currentDay = document.getElementById('currentDay');
 var date = "";
-var time="";
-var hour="";
+var time= $('#currentDay');
 
 //Current Date
 var currentTime = function(){
-    date = moment(new Date());
-    time.html(date.format('MMMM do YYYY, h:mm:ss a'));
-    hour=parseInt(date.format("H"));
+    date = moment().format('MMMM Do YYYY, h:mm:ss a');
+    time.text(date);
 }
 
 // currentTime();
@@ -28,7 +26,7 @@ Array.from(rows).forEach(row => {
     if (now === rowString) {
         setColor(row, "red");
     } else if (now < rowString) {
-        setcolor(row,"green");
+        setColor(row,"green");
     } else {
         setColor(row,"grey");
     }
@@ -70,7 +68,7 @@ function getData(){
     //Get item from local storage
     // var localStorageItem = localStorage.getItem('highscores');
    for (var i=0; i<9; i++) {
-       var id = `text${i}`;
+       var id = `txt${i}`;
        var localStorageItem = localStorage.getItem(id);
        var data = JSON.parse(localStorageItem);
     //    console.log(data);
