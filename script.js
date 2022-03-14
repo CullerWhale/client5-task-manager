@@ -17,7 +17,7 @@ $(document).ready(function(){
     setInterval(currentTime, 1000);
 });
 
-//Adding Cullers
+//Adding colors
 const rows = document.getElementsByClassName("row");
 let now = parseInt(moment().format('H'));
 
@@ -38,7 +38,6 @@ function setColor(element, color) {
 }
 
 // setColor();
-
 
 // save to local storage
 var saveBtn = document.querySelectorAll('.saveBtn');
@@ -77,29 +76,5 @@ function getData(){
        }
    }
 }
-
 getData();
 
-
-
-
-//Adding Cullers 2
-// function cullers () {
-//     var now = moment().format('H');
-//     var timeBlock = $(".description");
-//     for (var i=0; i < timeBlock.length; i++) {
-//         var blockID = timeBlock[i].id;
-//         var changeID = document.getElementById(timeBlock[i].id);
-//         if (parseInt(blockID)<now) {
-//             $(changeID).addClass('future');
-//         }
-//         else if(parseInt(blockID)>now){
-//             $(changeID).addClass("present");
-//         }
-//         else {
-//             $(changeID).addClass('present');
-//         }
-//     }
-// }
-
-// setInterval(cullers(), (1000*60)*5);
